@@ -1,4 +1,4 @@
-# 🐹 GopherTales - Interactive Adventure Game
+#  GopherTales - Interactive Adventure Game
 
 <div align="center">
 
