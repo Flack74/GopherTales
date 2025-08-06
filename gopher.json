@@ -1,0 +1,112 @@
+{
+  "intro": {
+    "title": "The Little Gopher",
+    "story": [
+      "Once upon a time, there was a cheerful little gopher with big, curious eyes and a tiny backpack slung over his shoulders. Today, he woke up brimming with excitement — he wanted to go on a grand adventure, but didn’t know where to start.",
+      "One of his friends once suggested traveling to New York to attend a mysterious event called \"GothamGo\". Rumor had it that there were endless snacks, quirky talks, and free swag (which gophers love more than carrots). But there was also a scary campfire story about the notorious Sticky Bandits who roamed the city. Probably just an urban legend… right?",
+      "Then again, Denver had always been on his mind — snowy slopes, warm cocoa, friendly faces, and even a conference dedicated to gophers like him. Perhaps it was the safer, cozier option."
+    ],
+    "options": [
+      {
+        "text": "That bandit story is just from Home Alone 2! Let’s hop to New York.",
+        "arc": "new-york"
+      },
+      {
+        "text": "Better safe than sorry — let’s hit the slopes in Denver.",
+        "arc": "denver"
+      }
+    ]
+  },
+  "new-york": {
+    "title": "Visiting New York",
+    "story": [
+      "The moment you and your gopher pal arrive in New York, the skyscrapers loom above like steel giants. Your gopher waves his tiny paw at taxis, but none stop — muttering something about 'pets'. As if gophers shed more than humans!",
+      "Undeterred, you order a ride from your phone. A few minutes later, a grumpy driver pulls up, glancing suspiciously at your furry friend before tossing your luggage in the trunk.",
+      "The ride is filled with the driver’s endless tales about how driving barely pays the bills, so you both put on earbuds and gaze out at the bustling streets.",
+      "Finally, you arrive at the conference hall for GothamGo. The badge table is friendly, but when you enter the main hall, you see something bizarre — a masked man in a cape with badly drawn abs… standing next to a person in a fox costume. What could they possibly be doing?"
+    ],
+    "options": [
+      {
+        "text": "This is too weird — let’s head home.",
+        "arc": "home"
+      },
+      {
+        "text": "Maybe big cities just have odd fashion. Let’s grab a seat.",
+        "arc": "debate"
+      }
+    ]
+  },
+  "debate": {
+    "title": "The Great Debate",
+    "story": [
+      "As the crowd settles, the caped hero and the fox-faced debater begin exchanging words with dramatic hand gestures. The audience cheers and boos in waves, making it feel like a wrestling match without the ring.",
+      "You don’t understand all the details, but your gopher buddy is leaning forward, clearly fascinated. It feels like you’re expected to pick a side."
+    ],
+    "options": [
+      {
+        "text": "The fox figure clearly won.",
+        "arc": "sean-kelly"
+      },
+      {
+        "text": "The caped one is the true hero!",
+        "arc": "mark-bates"
+      },
+      {
+        "text": "This is awkward… let’s slip out quietly.",
+        "arc": "home"
+      }
+    ]
+  },
+  "sean-kelly": {
+    "title": "Exit Stage Left",
+    "story": [
+      "As you approach the fox-masked figure, he introduces himself as Sean Kelly. Curious, you look him up on your phone… only to find his online handle is 'StabbyCutyou'.",
+      "Your gopher buddy’s eyes widen. Maybe New York’s scary stories aren’t just stories.",
+      "Without another word, you grab your gopher pal and rush out. 'I’ll explain at the hotel,' you mutter.",
+      "That night, you both agree: adventure quota met. Home tomorrow."
+    ],
+    "options": [
+      {
+        "text": "Book an early flight home.",
+        "arc": "home"
+      }
+    ]
+  },
+  "mark-bates": {
+    "title": "Costume Time",
+    "story": [
+      "The caped crusader introduces himself as Mark Bates. Despite the fake abs, he’s surprisingly friendly.",
+      "He’s been working on a project called Buffalo and needs a mascot. He shows you a buffalo costume — way too small for him.",
+      "Your gopher buddy tries it on and fits perfectly! Mark snaps photos, laughing about how Ashley McNamara designs the best costumes.",
+      "The rest of the trip is full of laughs and stories, but soon it’s your last night in the city."
+    ],
+    "options": [
+      {
+        "text": "Pack up for tomorrow’s flight.",
+        "arc": "home"
+      }
+    ]
+  },
+  "denver": {
+    "title": "Hockey and Ski Slopes",
+    "story": [
+      "You arrive in Denver to clear skies and snowy peaks. First stop — a hockey game! The Avalanche aren’t having the best season, but your gopher buddy waves a little foam finger, cheering like it’s the finals.",
+      "The next day, you’re on the ski slopes. The mountain air is crisp, and your gopher’s tiny ski goggles keep slipping down his nose.",
+      "You think about checking out GopherCon, but your buddy refuses — something about 'No Space Walks allowed' after seeing the conference website’s astronaut logo.",
+      "Before you know it, the week has flown by."
+    ],
+    "options": [
+      {
+        "text": "Time to pack for the journey home.",
+        "arc": "home"
+      }
+    ]
+  },
+  "home": {
+    "title": "Home Sweet Home",
+    "story": [
+      "Back home, your gopher pal thanks you for the trip. Maybe next year’s adventure will be even bigger — perhaps overseas? He’s heard gophers are all the rage in China."
+    ],
+    "options": []
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{ .Arc.Title }}</title>
+        <link rel="stylesheet" href="/static/css/story_styles.css" />
+        <link rel="icon" type="image/svg+xml" href="../static/music.svg" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="{{ .ArcName | html }}">
+        <div class="page">
+            <div class="gopher-left">
+                <img src="/static/{{ .Arc.Image }}" alt="Gopher" />
+            </div>
+
+            <div class="story-content">
+                <div class="story-inner">
+                    <h1>{{ .Arc.Title }}</h1>
+
+                    {{ range .Arc.Story }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+
+                    <ul>
+                        {{ range .Arc.Options }}
+                        <li>
+                            <a href="/story?arc={{ .Arc }}">{{ .Text }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <a class="back-home" href="/">← Back to Home</a>
+            </div>
+        </div>
+    </body>
+</html>
