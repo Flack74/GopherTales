@@ -1,10 +1,10 @@
-#  GopherTales - Interactive Adventure Game
+# 🦫 GopherTales - Interactive Adventure Game
 
 <div align="center">
 
 ![GopherTales Logo](static/home_gopher.png)
 
-**An interactive "Choose Your Own Adventure" web application built with Go**
+**A modern, responsive "Choose Your Own Adventure" web application built with Go, featuring user authentication, progress tracking, and real-time bookmarking**
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -23,42 +23,71 @@
 - [🔌 API Endpoints](#-api-endpoints)
 - [🎯 Usage Examples](#-usage-examples)
 - [🧪 Testing](#-testing)
+- [📱 Responsive Design](#-responsive-design)
 - [🚀 Deployment](#-deployment)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
+## 🏆 Current Status
+
+**GopherTales is production-ready!** ✅
+
+- ✅ **6 Unique Gopher Adventures** with 106+ story arcs
+- ✅ **User Authentication** with name field and secure sessions
+- ✅ **Real-time Progress Tracking** with MongoDB persistence
+- ✅ **Smart Bookmark System** with inline success feedback
+- ✅ **Fully Responsive Design** for all device sizes
+- ✅ **Complete CI/CD Pipeline** with DockerHub integration
+- ✅ **AWS EKS Ready** with Kubernetes configurations
+- ✅ **Comprehensive Testing** with unit test coverage
+- ✅ **Production Database** integration (MongoDB)
+- ✅ **Clean Architecture** with proper separation of concerns
+
 ## ✨ Features
 
 ### 🎮 Interactive Storytelling
-- **Dynamic Story Progression**: Navigate through branching storylines with meaningful choices
+- **6 Unique Gopher Adventures**: Choose from Blue, Cyan, Brown, Green, Pink, or Purple gopher stories
+- **106+ Story Arcs**: Extensive branching narratives with meaningful choices
 - **Multiple Endings**: Discover different outcomes based on your decisions
-- **Rich Narrative**: Immersive story with colorful characters and engaging plot
+- **Rich Narrative**: Immersive stories with colorful characters and engaging plots
+- **Real-time Progress Tracking**: Automatic progress saving as you advance through stories
+- **Smart Bookmark System**: Save your current position with server-side persistence
 
 ### 🎨 Modern Web Experience
-- **Responsive Design**: Beautiful UI that works on desktop, tablet, and mobile
+- **Fully Responsive**: Optimized for phones, tablets, laptops, desktops, and TV screens
+- **Whimsical Design**: Soft lavender, warm yellow, and sage green color palette
 - **Smooth Animations**: CSS animations and transitions for enhanced user experience
-- **Dynamic Theming**: Different visual themes for each story arc
+- **Dynamic Theming**: Different visual themes for each gopher character
 - **Accessibility**: WCAG compliant design with proper ARIA labels
+- **User Authentication**: Secure registration with name field and login system
+- **Inline Feedback**: Success messages without intrusive popups
 
 ### 🔧 Technical Excellence
 - **Clean Architecture**: Well-structured Go codebase with separation of concerns
 - **RESTful API**: JSON endpoints for headless usage and integrations
+- **Database Integration**: MongoDB for user data and persistence
 - **Middleware Stack**: Logging, recovery, CORS, and security headers
 - **Graceful Shutdown**: Proper server lifecycle management
 - **Configuration Management**: Environment-based configuration
 - **Error Handling**: Comprehensive error handling and logging
+- **Unit Testing**: Comprehensive test coverage for all services
 
 ### 🛡️ Production Ready
 - **Security Headers**: XSS protection, content type options, frame options
 - **Request Logging**: Detailed HTTP request/response logging
 - **Health Checks**: Built-in health check endpoint for monitoring
 - **Configurable Timeouts**: Customizable read, write, and idle timeouts
+- **Docker Support**: Containerized deployment with multi-stage builds
+- **AWS EKS Ready**: Kubernetes deployment configurations included
+- **Dual CI/CD Pipeline**: Separate workflows for continuous integration and AWS deployment
+- **DockerHub Integration**: Automated multi-platform image builds
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - Go 1.21 or higher
+- MongoDB (local or Atlas)
 - Git
 
 ### Installation
@@ -74,12 +103,18 @@
    go mod tidy
    ```
 
-3. **Run the application**
+3. **Configure environment**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your MongoDB credentials
+   ```
+
+4. **Run the application**
    ```bash
    go run cmd/server/main.go
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    ```
    http://localhost:8000
    ```
@@ -92,6 +127,19 @@ docker build -t gophertales .
 
 # Run the container
 docker run -p 8000:8000 gophertales
+```
+
+### Docker Compose (Recommended)
+
+```bash
+# Start the application
+docker-compose up -d
+
+# View logs
+docker-compose logs -f gophertales
+
+# Stop the application
+docker-compose down
 ```
 
 ## 🏗️ Project Structure
@@ -163,9 +211,11 @@ The application supports configuration through environment variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `STORY_DATA_FILE` | `gopher.json` | Path to story data file |
+| `STORY_DATA_FILE` | `gopher_six.json` | Path to story data file |
 | `STATIC_DIR` | `./static` | Static files directory |
 | `TEMPLATE_DIR` | `./templates` | Templates directory |
+| `MONGO_URI` | `""` | MongoDB connection string |
+| `DB_NAME` | `gophertales` | Database name |
 
 ### Example Configuration
 
@@ -266,6 +316,58 @@ GOOS=windows GOARCH=amd64 go build -o gophertales-windows.exe cmd/server/main.go
 # Build for macOS
 GOOS=darwin GOARCH=amd64 go build -o gophertales-macos cmd/server/main.go
 ```
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home-page.png)
+*Welcome page with animated gopher and call-to-action buttons*
+
+### User Dashboard
+![Dashboard](screenshots/dashboard.png)
+*Personalized dashboard showing user progress and quick actions*
+
+### Login Page
+![Login](screenshots/login-page.png)
+*Clean and secure login interface*
+
+### Registration Page
+![Register](screenshots/register-page.png)
+*User-friendly registration with name, email, and password fields*
+
+### Gopher Selection
+![Selection](screenshots/selection-page.png)
+*Choose your adventure with 6 unique gopher characters*
+
+### Story Page
+![Story](screenshots/story-page.png)
+*Interactive storytelling with choices and progress tracking*
+
+### Profile & Stats
+![Profile](screenshots/profile-page.png)
+*Comprehensive user profile with progress tracking and system overview*
+
+## 📱 Responsive Design
+
+GopherTales is fully responsive and optimized for all device types:
+
+### Device Breakpoints
+
+| Device Type | Screen Size | Optimizations |
+|-------------|-------------|---------------|
+| **Mobile Phones** | < 480px | Single column layout, larger touch targets, simplified navigation |
+| **Tablets** | 481px - 768px | Two-column grid, optimized spacing, touch-friendly controls |
+| **Laptops** | 769px - 1024px | Multi-column layout, hover effects, keyboard navigation |
+| **Desktop** | 1025px - 1440px | Full feature set, optimal spacing, advanced interactions |
+| **Large Screens/TV** | > 1441px | Expanded layout, larger fonts, enhanced visual elements |
+
+### Responsive Features
+
+- **Adaptive Typography**: Font sizes scale appropriately for each device
+- **Flexible Layouts**: Grid systems adjust to screen real estate
+- **Touch Optimization**: Larger buttons and touch targets on mobile devices
+- **Performance**: Optimized animations and effects based on device capabilities
+- **Accessibility**: Maintains WCAG compliance across all screen sizes
 
 ## 🧪 Testing
 
@@ -430,14 +532,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Gophercises**: Inspired by Jon Calhoun's Go programming exercises
 - **Go Community**: For excellent libraries and documentation
-- **Contributors**: Thank you to all who have contributed to this project
 - **[Mat Ryer](https://github.com/matryer)** – Thank you for creating [gopherize.me](https://gopherize.me/), a delightful tool that added character and fun to this project.
 
 ## 📞 Support
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Flack74/GopherTales/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/Flack74/GopherTales/discussions)
-- 📧 **Email**: support@gophertales.dev
+- 📧 **Email**: puspendrachawlax@gmail.com
 
 ---
 

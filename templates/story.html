@@ -27,14 +27,164 @@
                     <ul>
                         {{ range .Arc.Options }}
                         <li>
+                            {{ if $.Gopher }}
+                            <a href="/story?gopher={{ $.Gopher }}&arc={{ .Arc }}">{{ .Text }}</a>
+                            {{ else }}
                             <a href="/story?arc={{ .Arc }}">{{ .Text }}</a>
+                            {{ end }}
                         </li>
                         {{ end }}
                     </ul>
                 </div>
 
-                <a class="back-home" href="/">← Back to Home</a>
+                <div class="story-actions">
+                    {{ if .User }}
+                    <button class="bookmark-btn" onclick="saveBookmark()">🔖 Save Bookmark</button>
+                    <a class="profile-link" href="/profile">👤 Profile</a>
+                    {{ end }}
+                    {{ if .Gopher }}
+                    <a class="back-home" href="/selection">← Back to Gopher Selection</a>
+                    {{ else }}
+                    <a class="back-home" href="/">← Back to Home</a>
+                    {{ end }}
+                </div>
+                
+                <script>
+                    // Track progress
+                    const gopher = '{{ .Gopher }}';
+                    const arc = '{{ .ArcName }}';
+                    
+                    if (gopher) {
+                        updateProgress(gopher, arc);
+                    }
+                    
+                    function updateProgress(gopherColor, arcName) {
+                        let progress = JSON.parse(localStorage.getItem('gopherProgress') || '{}');
+                        if (!progress[gopherColor]) progress[gopherColor] = {};
+                        progress[gopherColor][arcName] = true;
+                        
+                        // Calculate completion percentage (rough estimate)
+                        const completedArcs = Object.keys(progress[gopherColor]).length;
+                        const estimatedTotal = 20; // Rough estimate of total arcs per gopher
+                        const percentage = Math.min((completedArcs / estimatedTotal) * 100, 100);
+                        
+                        let overallProgress = JSON.parse(localStorage.getItem('gopherProgress') || '{}');
+                        overallProgress[gopherColor] = percentage;
+                        localStorage.setItem('gopherProgress', JSON.stringify(overallProgress));
+                    }
+                    
+                    async function saveBookmark() {
+                        const btn = document.querySelector('.bookmark-btn');
+                        const originalText = btn.textContent;
+                        
+                        try {
+                            btn.textContent = 'Saving...';
+                            btn.disabled = true;
+                            
+                            const response = await fetch('/api/bookmark', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    gopher: gopher,
+                                    arc: arc,
+                                    title: '{{ .Arc.Title }}'
+                                })
+                            });
+                            
+                            if (response.ok) {
+                                btn.textContent = '✓ Bookmark Added!';
+                                btn.style.background = '#97BC62';
+                                btn.style.color = 'white';
+                                setTimeout(() => {
+                                    btn.textContent = originalText;
+                                    btn.style.background = '';
+                                    btn.style.color = '';
+                                    btn.disabled = false;
+                                }, 2000);
+                            } else {
+                                btn.textContent = '⚠️ Failed to save';
+                                setTimeout(() => {
+                                    btn.textContent = originalText;
+                                    btn.disabled = false;
+                                }, 2000);
+                            }
+                        } catch (error) {
+                            console.error('Bookmark error:', error);
+                            btn.textContent = '⚠️ Failed to save';
+                            setTimeout(() => {
+                                btn.textContent = originalText;
+                                btn.disabled = false;
+                            }, 2000);
+                        }
+                    }
+                    
+                    // Preload next arcs
+                    const options = document.querySelectorAll('a[href*="story"]');
+                    options.forEach(link => {
+                        link.addEventListener('mouseenter', function() {
+                            const url = this.href + '&format=json';
+                            fetch(url).catch(() => {}); // Preload silently
+                        });
+                    });
+                </script>
             </div>
         </div>
-    </body>
+    <style>
+.bookmark-btn, .profile-link {
+    background: linear-gradient(45deg, #FFF685, #fff9a3);
+    color: #97BC62;
+    border: 2px solid #FFF685;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 246, 133, 0.3);
+}
+
+.bookmark-btn:hover, .profile-link:hover {
+    background: #97BC62;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(151, 188, 98, 0.4);
+}
+
+.story-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.back-home {
+    background: linear-gradient(45deg, #D0BDF4, #e6d9f7);
+    color: #97BC62;
+    border: 2px solid #D0BDF4;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(208, 189, 244, 0.3);
+}
+
+.back-home:hover {
+    background: #97BC62;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(151, 188, 98, 0.4);
+}
+</style>
+</body>
 </html>

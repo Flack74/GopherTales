@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, #D0BDF4 0%, #e6d9f7 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(208, 189, 244, 0.3);
+    border: 3px solid #FFF685;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-header h1 {
+    font-size: 3rem;
+    color: #97BC62;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(208, 189, 244, 0.3);
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+
+
+.user-info h2 {
+    color: #97BC62;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.user-email {
+    color: #D0BDF4;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.user-info p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #FFF685, #fff9a3, #FFF685);
+    color: #97BC62;
+    padding: 2.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.4s ease;
+    border: 3px solid #FFF685;
+    box-shadow: 0 10px 25px rgba(255, 246, 133, 0.3), 0 0 0 2px rgba(208, 189, 244, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.stat-card:hover::before {
+    left: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 246, 133, 0.4), 0 0 20px rgba(208, 189, 244, 0.3);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stat-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.progress-section, .bookmarks-section {
+    margin-bottom: 3rem;
+}
+
+.progress-section h3, .bookmarks-section h3 {
+    font-size: 1.5rem;
+    color: #97BC62;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.progress-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.gopher-name {
+    font-weight: 600;
+    color: #1E2761;
+}
+
+.progress-percent {
+    font-weight: 600;
+    color: #C7AF6B;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #D0BDF4, #e6d9f7);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.bookmark-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-info h4 {
+    color: #1E2761;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.bookmark-info p {
+    color: #C7AF6B;
+    margin-bottom: 0.5rem;
+}
+
+.bookmark-info small {
+    color: #7f8c8d;
+}
+
+.bookmark-link {
+    background: #FFF685;
+    color: #97BC62;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.bookmark-link:hover {
+    background: #97BC62;
+    color: white;
+    transform: translateX(5px);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: linear-gradient(45deg, #FFF685, #fff9a3);
+    color: #97BC62;
+    border: 3px solid #FFF685;
+    font-weight: 700;
+}
+
+.btn.secondary {
+    background: #97BC62;
+    color: white;
+    border: 3px solid #97BC62;
+    font-weight: 600;
+}
+
+.system-stats-section {
+    margin-bottom: 3rem;
+}
+
+.system-stats-section h3 {
+    font-size: 1.5rem;
+    color: #97BC62;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.overview-card {
+    background: linear-gradient(135deg, #FFF685, #fff9a3);
+    color: #97BC62;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+    border: 2px solid #FFF685;
+}
+
+.overview-card.success {
+    background: linear-gradient(135deg, #97BC62, #a8c970);
+    color: white;
+    border-color: #97BC62;
+}
+
+.overview-card.error {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border-color: #e74c3c;
+}
+
+.overview-card:hover {
+    transform: translateY(-3px);
+}
+
+.overview-card .card-icon {
+    font-size: 2rem;
+}
+
+.overview-card .card-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.overview-card .card-content p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .profile-container {
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 15px;
+    }
+    
+    .profile-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .user-info h2 {
+        font-size: 1.4rem;
+    }
+    
+    .user-info p {
+        font-size: 0.9rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .stat-icon {
+        font-size: 2.5rem;
+    }
+    
+    .stat-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .progress-section h3,
+    .bookmarks-section h3,
+    .system-stats-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .overview-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .bookmark-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .bookmark-link {
+        align-self: stretch;
+        text-align: center;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+    
+    .profile-container {
+        padding: 2rem;
+        margin: 0;
+    }
+    
+    .profile-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bookmark-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

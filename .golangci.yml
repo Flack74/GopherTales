@@ -1,0 +1,14 @@
+# golangci-lint configuration
+run:
+  timeout: 5m
+
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - staticcheck
+    - unused
+    - gofmt
+    - gosec
+    - revive

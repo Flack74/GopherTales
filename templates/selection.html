@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Your Gopher - GopherTales</title>
+    <link rel="stylesheet" href="/static/css/selection_styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/static/music.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Choose Your Gopher Adventure</h1>
+            <p class="subtitle">Each gopher has a unique story waiting to unfold</p>
+        </header>
+        
+        <div class="gopher-grid">
+            <div class="gopher-card" data-color="blue">
+                <div class="gopher-image">
+                    <img src="/static/gopher_blue.png" alt="Blue Gopher" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Blue Gopher</h3>
+                    <p>Sky Explorer & Balloon Adventurer</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Adventurous</span>
+                        <span class="trait">Dreamer</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Blue Gopher awoke to sunrise shimmering off distant hot-air balloons...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gopher-card" data-color="cyan">
+                <div class="gopher-image">
+                    <img src="/static/gopher_cyan.png" alt="Cyan Gopher" onerror="console.log('Failed to load cyan gopher image'); this.style.display='none'" onload="console.log('Cyan gopher image loaded successfully')" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Cyan Gopher</h3>
+                    <p>Tech Innovator & Code Master</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Innovative</span>
+                        <span class="trait">Logical</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Cyan Gopher nearly topples a stack of circuit boards as an urgent email pings...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gopher-card" data-color="brown">
+                <div class="gopher-image">
+                    <img src="/static/gopher_brown.png" alt="Brown Gopher" onerror="this.style.display='none'" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Brown Gopher</h3>
+                    <p>Forest Guardian & Nature Protector</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Protective</span>
+                        <span class="trait">Wise</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Brown Gopher tightens his ranger vest as dawn mist curls between towering pines...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gopher-card" data-color="green">
+                <div class="gopher-image">
+                    <img src="/static/gopher_green.png" alt="Green Gopher" onerror="this.style.display='none'" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Green Gopher</h3>
+                    <p>Garden Master & Eco Warrior</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Nurturing</span>
+                        <span class="trait">Patient</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Green Gopher gazes over an abandoned lot in town, picturing terraced vegetable beds...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gopher-card" data-color="pink">
+                <div class="gopher-image">
+                    <img src="/static/gopher_pink.png" alt="Pink Gopher" onerror="this.style.display='none'" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Pink Gopher</h3>
+                    <p>Artist & Creative Visionary</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Creative</span>
+                        <span class="trait">Expressive</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Pink Gopher twirls a paintbrush, cheeks flecked magenta, as an email arrives...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gopher-card" data-color="purple">
+                <div class="gopher-image">
+                    <img src="/static/gopher_purple.png" alt="Purple Gopher" onerror="this.style.display='none'" />
+                    <div class="progress-ring">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                </div>
+                <div class="gopher-info">
+                    <h3>Purple Gopher</h3>
+                    <p>Mystic Explorer & Dream Seeker</p>
+                    <div class="story-stats">
+                        <span class="stat">📖 <span class="arc-count">0</span> arcs</span>
+                        <span class="stat">⏱️ <span class="read-time">0</span>min</span>
+                    </div>
+                    <div class="gopher-traits">
+                        <span class="trait">Mystical</span>
+                        <span class="trait">Curious</span>
+                    </div>
+                    <div class="story-preview hidden">
+                        <p class="preview-text">Purple Gopher discovers an iridescent parchment in her attic...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn-random" onclick="selectRandomGopher()">🎲 Surprise Me!</button>
+            <a href="/" class="btn-back">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        let gopherData = {};
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadGopherStats();
+            loadProgress();
+            setupEventListeners();
+        });
+        
+        async function loadGopherStats() {
+            try {
+                const response = await fetch('/api/gopher-stats');
+                gopherData = await response.json();
+                updateStatsDisplay();
+            } catch (error) {
+                console.error('Failed to load gopher stats:', error);
+            }
+        }
+        
+        function updateStatsDisplay() {
+            Object.keys(gopherData).forEach(color => {
+                const card = document.querySelector(`[data-color="${color}"]`);
+                if (card && gopherData[color]) {
+                    const arcCount = card.querySelector('.arc-count');
+                    const readTime = card.querySelector('.read-time');
+                    if (arcCount) arcCount.textContent = gopherData[color].arc_count || 0;
+                    if (readTime) readTime.textContent = gopherData[color].read_time || 0;
+                }
+            });
+        }
+        
+        function loadProgress() {
+            const progress = JSON.parse(localStorage.getItem('gopherProgress') || '{}');
+            Object.keys(progress).forEach(color => {
+                const progressFill = document.querySelector(`[data-color="${color}"] .progress-fill`);
+                if (progressFill) {
+                    const percent = Math.min(progress[color] || 0, 100);
+                    progressFill.style.background = `conic-gradient(#4CAF50 ${percent * 3.6}deg, #e0e0e0 0deg)`;
+                    progressFill.dataset.progress = percent;
+                }
+            });
+        }
+        
+        function setupEventListeners() {
+            const cards = document.querySelectorAll('.gopher-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const color = this.dataset.color;
+                    saveLastPlayed(color);
+                    window.location.href = `/story?gopher=${color}&arc=intro`;
+                });
+                
+                card.addEventListener('mouseenter', function() {
+                    const preview = this.querySelector('.story-preview');
+                    if (preview) preview.classList.remove('hidden');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const preview = this.querySelector('.story-preview');
+                    if (preview) preview.classList.add('hidden');
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                    navigateCards(e.key === 'ArrowRight' ? 1 : -1);
+                } else if (e.key === 'Enter') {
+                    const focused = document.querySelector('.gopher-card.focused');
+                    if (focused) focused.click();
+                } else if (e.key === 'r' || e.key === 'R') {
+                    selectRandomGopher();
+                }
+            });
+        }
+        
+        function navigateCards(direction) {
+            const cards = Array.from(document.querySelectorAll('.gopher-card'));
+            const current = document.querySelector('.gopher-card.focused');
+            let index = current ? cards.indexOf(current) : -1;
+            
+            if (current) current.classList.remove('focused');
+            
+            index = (index + direction + cards.length) % cards.length;
+            cards[index].classList.add('focused');
+            cards[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function selectRandomGopher() {
+            const colors = ['blue', 'cyan', 'brown', 'green', 'pink', 'purple'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            saveLastPlayed(randomColor);
+            window.location.href = `/story?gopher=${randomColor}&arc=intro`;
+        }
+        
+        function saveLastPlayed(color) {
+            localStorage.setItem('lastPlayedGopher', color);
+            localStorage.setItem('lastPlayedTime', Date.now());
+        }
+    </script>
+</body>
+</html>

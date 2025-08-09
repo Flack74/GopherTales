@@ -37,7 +37,7 @@ COPY --from=builder /app/main .
 # Copy static assets and templates
 COPY --from=builder /app/static ./static
 COPY --from=builder /app/templates ./templates
-COPY --from=builder /app/gopher.json .
+COPY --from=builder /app/gopher_six.json .
 
 # Change ownership to appuser
 RUN chown -R appuser:appuser /home/appuser

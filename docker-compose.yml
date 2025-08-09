@@ -1,0 +1,14 @@
+services:
+  gophertales:
+    build: .
+    container_name: gophertales-app
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - MONGO_URI=mongodb+srv://flack74621:12345xyz09876@cluster0.qc2zogk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - STORY_DATA_FILE=gopher_six.json
+    restart: unless-stopped
+    volumes:
+      - ./gopher_six.json:/app/gopher_six.json:ro

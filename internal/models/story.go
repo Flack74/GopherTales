@@ -23,6 +23,8 @@ type Story struct {
 type PageData struct {
 	Arc     Arc
 	ArcName string
+	Gopher  string
+	User    *User
 }
 
 // GetArc retrieves an arc by name, returns default "intro" if not found

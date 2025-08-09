@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - GopherTales</title>
+    <link rel="stylesheet" href="/static/css/auth_styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../static/music.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Join GopherTales</h1>
+            <p>Start your adventure today</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required minlength="6" />
+                </div>
+                <button type="submit" class="auth-btn">Register</button>
+            </form>
+            
+            <div class="auth-links">
+                <p>Already have an account? <a href="/login">Sign in</a></p>
+                <a href="/">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    window.location.href = data.redirect_url || '/dashboard';
+                } else {
+                    const error = await response.text();
+                    alert('Registration failed: ' + error);
+                }
+            } catch (error) {
+                alert('Registration failed: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

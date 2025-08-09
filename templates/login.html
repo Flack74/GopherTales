@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - GopherTales</title>
+    <link rel="stylesheet" href="/static/css/auth_styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../static/music.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Welcome Back</h1>
+            <p>Continue your gopher adventures</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required />
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+            
+            <div class="auth-links">
+                <p>Don't have an account? <a href="/register">Sign up</a></p>
+                <a href="/">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    window.location.href = data.redirect_url || '/dashboard';
+                } else {
+                    const error = await response.text();
+                    alert('Login failed: ' + error);
+                }
+            } catch (error) {
+                alert('Login failed: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

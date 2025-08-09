@@ -20,10 +20,34 @@
                     An interactive journey with choices that shape your
                     adventure.
                 </p>
-                <a href="/story?arc=intro" class="start-btn"
-                    >Start the Journey 🚀</a
+                {{ if .IsLoggedIn }}
+                <div class="user-welcome">
+                    <p class="welcome-text">Welcome back, {{ .User.Name }}! 👋</p>
+                    <div class="user-actions">
+                        <a href="/dashboard" class="auth-btn dashboard-btn">Dashboard</a>
+                        <button onclick="logout()" class="auth-btn logout-btn">Logout</button>
+                    </div>
+                </div>
+                {{ else }}
+                <div class="auth-buttons">
+                    <a href="/login" class="auth-btn login-btn">Login</a>
+                    <a href="/register" class="auth-btn register-btn">Register</a>
+                </div>
+                {{ end }}
+                <a href="/selection" class="start-btn"
+                    >Start Your Adventure 🚀</a
                 >
             </div>
         </div>
-    </body>
+        <script>
+        async function logout() {
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+                window.location.reload();
+            } catch (error) {
+                console.error('Logout failed:', error);
+            }
+        }
+    </script>
+</body>
 </html>

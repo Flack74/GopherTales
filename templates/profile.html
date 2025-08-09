@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - GopherTales</title>
+    <link rel="stylesheet" href="/static/css/profile_styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/static/music.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <h1>Adventure Profile</h1>
+            <div class="user-info">
+                <h2>{{ .User.Name }}</h2>
+                <p class="user-email">{{ .User.Email }}</p>
+                <p>Member since {{ .User.CreatedAt.Format "January 2, 2006" }}</p>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                    <h3>{{ .TotalProgress }}</h3>
+                    <p>Total Progress</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">🔖</div>
+                <div class="stat-content">
+                    <h3>{{ .BookmarkCount }}</h3>
+                    <p>Bookmarks</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                    <h3>{{ len .User.Progress }}</h3>
+                    <p>Gophers Started</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h3>Gopher Progress</h3>
+            <div class="progress-list">
+                {{ range $gopher, $progress := .User.Progress }}
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span class="gopher-name">{{ $gopher }} Gopher</span>
+                        <span class="progress-percent">{{ $progress }}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="{{ $progress }}"></div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="bookmarks-section">
+            <h3>Recent Bookmarks</h3>
+            <div class="bookmarks-list">
+                {{ range .User.Bookmarks }}
+                <div class="bookmark-item">
+                    <div class="bookmark-info">
+                        <h4>{{ .Title }}</h4>
+                        <p>{{ .Gopher }} Gopher - {{ .Arc }}</p>
+                        <small>{{ .Timestamp.Format "Jan 2, 2006 at 3:04 PM" }}</small>
+                    </div>
+                    <a href="/story?gopher={{ .Gopher }}&arc={{ .Arc }}" class="bookmark-link">Continue →</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="system-stats-section">
+            <h3>📊 System Overview</h3>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">📚</div>
+                    <div class="card-content">
+                        <h4>{{ .StoryStats.total_arcs }}</h4>
+                        <p>Total Story Arcs</p>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="card-icon">🔗</div>
+                    <div class="card-content">
+                        <h4>{{ .StoryStats.total_options }}</h4>
+                        <p>Story Options</p>
+                    </div>
+                </div>
+                
+                <div class="overview-card {{ if .HasIssues }}error{{ else }}success{{ end }}">
+                    <div class="card-icon">{{ if .HasIssues }}⚠️{{ else }}✅{{ end }}</div>
+                    <div class="card-content">
+                        <h4>{{ len .Issues }}</h4>
+                        <p>System Health</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/selection" class="btn primary">Continue Adventure</a>
+            <button onclick="logout()" class="btn secondary">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Set progress bar widths from data attributes
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.progress-fill').forEach(function(el) {
+                const progress = el.getAttribute('data-progress');
+                el.style.width = progress + '%';
+            });
+        });
+
+        async function logout() {
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Logout failed:', error);
+            }
+        }
+    </script>
+</body>
+</html>

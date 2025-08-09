@@ -1,0 +1,1403 @@
+{
+  "blue": {
+    "intro": {
+      "title": "The Call of the Sky",
+      "story": [
+        "Blue Gopher awoke to sunrise shimmering off distant hot-air balloons, their bright canopies drifting like candy in the clouds.",
+        "His heart pounded with wanderlust, yet a flutter of caution whispered that he could simply spend the morning charting constellations from his backyard hill.",
+        "He must now choose between leaping into the festival below or seeking quiet inspiration among the stars."
+      ],
+      "options": [
+        { "text": "Leap into a balloon basket!", "arc": "balloon-jump" },
+        { "text": "Stay home and stargaze instead.", "arc": "stargaze" }
+      ]
+    },
+    "balloon-jump": {
+      "title": "First Lift-Off",
+      "story": [
+        "Blue scampers aboard a rainbow-striped balloon just as its ropes release, and the ground drops away in a whoosh of cool wind.",
+        "The pilot laughs, handing Blue a tiny map that shows shifting air currents drawn like living rivers.",
+        "But a sudden cross-breeze nudges them off course toward stormy mountains on the horizon."
+      ],
+      "options": [
+        { "text": "Try steering the craft himself.", "arc": "cloud-watch" },
+        { "text": "Radio nearby balloons for help.", "arc": "teamwork" }
+      ]
+    },
+    "stargaze": {
+      "title": "Quiet Constellations",
+      "story": [
+        "Blue lays a blanket on the hill, unfurls his telescope, and spends hours sketching nebulae that look like secret cities.",
+        "A traveling astronomer named Dr. Lumen spots him and invites Blue on a nighttime research trek to map a newly found comet.",
+        "Blue feels torn between the safety of predictable skies and the thrill of deep-space exploration."
+      ],
+      "options": [
+        { "text": "Join Dr. Lumen’s expedition.", "arc": "research-trip" },
+        {
+          "text": "Politely decline and share findings with townsfolk.",
+          "arc": "share-tales"
+        }
+      ]
+    },
+    "cloud-watch": {
+      "title": "Dancing with Clouds",
+      "story": [
+        "Blue grabs the guide ropes, reading the swirling air like musical notes, and coaxes the balloon away from the storm.",
+        "The pilot applauds, offering Blue a spot on his annual sky-race crew that tours festivals worldwide.",
+        "Yet Blue wonders if a life of endless travel might steal him from the friends he loves."
+      ],
+      "options": [
+        {
+          "text": "Accept and chase a ballooning career.",
+          "arc": "balloon-career"
+        },
+        {
+          "text": "Return to Willowmere with new stories.",
+          "arc": "quiet-home"
+        }
+      ]
+    },
+    "teamwork": {
+      "title": "Fleet in the Sky",
+      "story": [
+        "Blue flashes semaphore signals with colored flags, and three neighboring balloons swoop in to form a sky convoy.",
+        "Together they guide each other through tricky thermals, laughing over cocoa packets shared between baskets on a rope line.",
+        "Festival organizers later invite Blue to join their Adventure Club, famous for daring expeditions."
+      ],
+      "options": [
+        { "text": "Join the Adventure Club.", "arc": "adventure-club" },
+        { "text": "Focus on scientific sky studies.", "arc": "science-path" }
+      ]
+    },
+    "research-trip": {
+      "title": "Chasing the Comet",
+      "story": [
+        "Blue rides in a rickety observatory van, recording data while icy night air crackles with meteor dust.",
+        "He witnesses the comet flare emerald green, realizing his drawings may rewrite local star charts.",
+        "The professor offers him a scholarship to the Cloud-Top Institute."
+      ],
+      "options": [
+        {
+          "text": "Accept the scholarship and relocate.",
+          "arc": "science-path"
+        },
+        {
+          "text": "Thank her but remain a hometown astronomer.",
+          "arc": "share-tales"
+        }
+      ]
+    },
+    "share-tales": {
+      "title": "Stories Beneath the Stars",
+      "story": [
+        "Blue hosts a town bonfire, projecting his telescope’s view onto a white sheet so children can gasp at distant galaxies.",
+        "Elders gift him an antique sextant said to guide any traveler back home, no matter how far they roam.",
+        "Opportunity knocks again when a traveling reporter asks Blue to join a global storytelling tour."
+      ],
+      "options": [
+        { "text": "Set off as a storyteller.", "arc": "adventure-club" },
+        {
+          "text": "Stay rooted and mentor young sky-watchers.",
+          "arc": "quiet-home"
+        }
+      ]
+    },
+    "balloon-career": {
+      "title": "Life Above the World",
+      "story": [
+        "Blue trains with veteran pilots, mastering cloud thermals and sunrise landings from Peru to Poland.",
+        "Each city greets him with cheers, yet lonely hotel windows sometimes mirror his longing for Willowmere’s oak-scented nights.",
+        "During a championship sky race, a rival’s balloon rips mid-air and only Blue is close enough to save them."
+      ],
+      "options": [
+        {
+          "text": "Risk his own win to attempt a rescue.",
+          "arc": "rescue-mission"
+        },
+        { "text": "Press on toward the finish line.", "arc": "sky-race" }
+      ]
+    },
+    "quiet-home": {
+      "title": "Peaceful Horizon",
+      "story": [
+        "Blue settles back into cottage life, teaching balloon-knot lessons to local scouts and painting sunsets on recycled canvas.",
+        "He feels joy when passing travelers pause to admire his calm wisdom, though part of him still aches for drifting winds.",
+        "One morning, he spots unfamiliar silhouettes aloft—an international balloon rally over Willowmere!"
+      ],
+      "options": [
+        {
+          "text": "Volunteer as ground crew for the rally.",
+          "arc": "festival-hero"
+        },
+        { "text": "Wave from afar and brew tea.", "arc": "home" }
+      ]
+    },
+    "adventure-club": {
+      "title": "Charter of the Brave",
+      "story": [
+        "Club members hand Blue a parchment pledge: explore, aid strangers, and journal every sky they cross.",
+        "Their first mission is a storm-chasing study over the Sapphire Sea, famed for lightning that etches patterns in the clouds.",
+        "But rumors speak of pirates who harvest thunder for mischief."
+      ],
+      "options": [
+        { "text": "Embark on the storm chase.", "arc": "storm-chase" },
+        { "text": "Lobby for a safer survey route.", "arc": "science-path" }
+      ]
+    },
+    "science-path": {
+      "title": "Academy of Air",
+      "story": [
+        "At Cloud-Top Institute, Blue writes algorithms predicting wind shifts, earning applause from professors and sponsors alike.",
+        "Yet bureaucracy slows his dreams, burying him under grant paperwork and committee meetings.",
+        "A colleague suggests entering the Grand Sky Innovation Contest where winners shape global flight policy."
+      ],
+      "options": [
+        {
+          "text": "Enter the contest with a bold proposal.",
+          "arc": "sky-race"
+        },
+        {
+          "text": "Escape the red tape and rejoin explorers.",
+          "arc": "adventure-club"
+        }
+      ]
+    },
+    "storm-chase": {
+      "title": "Heart of the Tempest",
+      "story": [
+        "Lightning illuminates rain-lashed fabric as Blue’s balloon skims waves that leap like silver dragons.",
+        "He must adjust ballast quickly to avoid spiraling into the sea, all while logging data for climate scientists.",
+        "A crack of thunder tears a seam—only quick thinking will keep them aloft."
+      ],
+      "options": [
+        {
+          "text": "Dump sandbags and rise above the storm.",
+          "arc": "lost-parachute"
+        },
+        {
+          "text": "Descend toward a mysterious isle below.",
+          "arc": "rescue-mission"
+        }
+      ]
+    },
+    "sky-race": {
+      "title": "Championship Circuit",
+      "story": [
+        "The start gun pops and hundreds of balloons surge forward, their crews shouting altitudes and wind angles.",
+        "Blue’s rigorous prep places him in the lead, but low fuel forces a risky shortcut through a canyon of jagged peaks.",
+        "Winning could cement his legacy, but one wrong downdraft spells disaster."
+      ],
+      "options": [
+        { "text": "Take the canyon shortcut.", "arc": "lost-parachute" },
+        {
+          "text": "Climb higher and lose precious minutes.",
+          "arc": "festival-hero"
+        }
+      ]
+    },
+    "lost-parachute": {
+      "title": "Tumble in the Blue",
+      "story": [
+        "A rogue gust flips the basket, scattering equipment—including Blue’s only parachute—into the yawning sky.",
+        "Spinning weightless, he recalls the antique sextant’s promise of safe return and spots a stray cargo balloon nearby.",
+        "He can leap toward it, or attempt to stabilize his own craft with improvised sails."
+      ],
+      "options": [
+        { "text": "Leap and grab the cargo balloon.", "arc": "rescue-mission" },
+        {
+          "text": "Fashion emergency sails from the torn canopy.",
+          "arc": "festival-hero"
+        }
+      ]
+    },
+    "rescue-mission": {
+      "title": "Hands Across the Sky",
+      "story": [
+        "Blue’s daring maneuver rescues both himself and the stranded rival crew, roping their balloons together like twins.",
+        "News flashes worldwide of the brave gopher whose compassion outweighed competition.",
+        "Airship Foundation leaders invite him to become their goodwill ambassador."
+      ],
+      "options": [
+        { "text": "Accept ambassador role.", "arc": "festival-hero" },
+        { "text": "Return home humbly.", "arc": "home" }
+      ]
+    },
+    "festival-hero": {
+      "title": "Balloons Over Willowmere",
+      "story": [
+        "Crowds throng Willowmere’s meadow as Blue’s heroic fleets land, baskets overflowing with rescued passengers and scientific treasures.",
+        "Children chant his name, and the mayor awards him a compass etched with the town crest.",
+        "Under a setting sun, Blue wonders where the compass will guide him next—but tonight, fireworks bloom like new constellations above."
+      ],
+      "options": [
+        { "text": "Plan the next grand voyage.", "arc": "cloud-watch" },
+        { "text": "Finally rest, content at last.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Homebound Horizons",
+      "story": [
+        "Blue Gopher sips chamomile tea on his porch, the sextant resting beside him like an old friend.",
+        "He closes his eyes, hearing distant burners whoosh and imagining fresh dawns that await somewhere beyond the hills.",
+        "Adventure, he knows, will always beckon—but so will the comfort of home, and that balance makes his sky-blue heart soar."
+      ],
+      "options": []
+    }
+  },
+
+  "cyan": {
+    "intro": {
+      "title": "Spark of Innovation",
+      "story": [
+        "Cyan Gopher nearly topples a stack of circuit boards as an urgent email pings: a world-renowned code-breaking contest in San Francisco begins tonight.",
+        "He’s torn—join a dazzling hackathon of legendary programmers, or stay local to finish the open-source library that beginners rely on.",
+        "Both choices glimmer with purpose, but only one can be pursued first."
+      ],
+      "options": [
+        { "text": "Jet to the hackathon!", "arc": "code-quest" },
+        { "text": "Stay and polish the library.", "arc": "stay-local" }
+      ]
+    },
+    "code-quest": {
+      "title": "Midnight Hack",
+      "story": [
+        "In a neon-lit warehouse lined with holographic projectors, Cyan joins a diverse team racing against a ticking quantum clock.",
+        "He discovers their challenge is decrypting satellite images that may reveal hidden coral-reef damage.",
+        "A rogue AI seems to sabotage every decryption attempt."
+      ],
+      "options": [
+        { "text": "Battle the rogue AI head-on.", "arc": "hackathon" },
+        {
+          "text": "Search the venue for a human culprit.",
+          "arc": "museum-mystery"
+        }
+      ]
+    },
+    "stay-local": {
+      "title": "Lines of Care",
+      "story": [
+        "Cyan brews extra-strong coffee and dives into refactoring code, aware that thousands of junior devs await tomorrow’s release.",
+        "Midway through, a critical security flaw surfaces—one that could expose user data worldwide.",
+        "He must choose swift patching alone or rally community contributors in a late-night video call."
+      ],
+      "options": [
+        { "text": "Patch solo for speed.", "arc": "solo-debug" },
+        { "text": "Summon global contributors.", "arc": "team-up" }
+      ]
+    },
+    "hackathon": {
+      "title": "Digital Showdown",
+      "story": [
+        "Cyan routes code through sandboxed containers, launching counter-algorithms that morph faster than the AI’s attacks.",
+        "The crowd gasps as cascading numerical patterns explode across giant screens, symbolizing each side’s progress.",
+        "At the climax, Cyan can sacrifice prize points to save corrupted team files."
+      ],
+      "options": [
+        { "text": "Sacrifice points and save files.", "arc": "team-up" },
+        { "text": "Chase personal victory.", "arc": "cyber-race" }
+      ]
+    },
+    "museum-mystery": {
+      "title": "Clue in the Gallery",
+      "story": [
+        "Late-night wanderings lead Cyan into the Tech History Museum next door, where blinking security lights reveal smudged footprints.",
+        "Behind an exhibit of retro modems, he catches a glimpse of a rival coder pocketing a stolen capacitor crucial to the hackathon network.",
+        "Security arrives, asking Cyan whether to testify or quietly recover the part himself."
+      ],
+      "options": [
+        { "text": "Testify and expose sabotage.", "arc": "security-breach" },
+        { "text": "Retrieve the part quietly.", "arc": "solo-debug" }
+      ]
+    },
+    "team-up": {
+      "title": "Global Commit",
+      "story": [
+        "Dev screens light up around the world as volunteers join Cyan’s repository, committing fixes in dozens of languages.",
+        "Banter and bug jokes fly faster than commits; spirits soar as the flaw shrinks to a single red line in the diff.",
+        "The community nominates Cyan to present their triumph at next month’s Go-Forward Conference."
+      ],
+      "options": [
+        { "text": "Prepare the keynote talk.", "arc": "conference-talk" },
+        { "text": "Pass the spotlight to a newcomer.", "arc": "mentor-meet" }
+      ]
+    },
+    "solo-debug": {
+      "title": "Quiet Genius",
+      "story": [
+        "Cyan isolates rogue modules, tracing the vulnerability’s root to a legacy dependency with murky ownership.",
+        "Hours blend into dawn, but at last the tests turn green and relief washes over him like cool cyan waves.",
+        "The exploit’s author posts an apology online, asking Cyan for mentorship."
+      ],
+      "options": [
+        { "text": "Offer mentorship with compassion.", "arc": "mentor-meet" },
+        { "text": "Decline and focus on bigger goals.", "arc": "open-source" }
+      ]
+    },
+    "conference-talk": {
+      "title": "Stage Fright",
+      "story": [
+        "Spotlights glare as Cyan steps onto the vast stage, heartbeat syncing with thunderous applause.",
+        "Halfway through, a live demo freezes—threatening to derail months of momentum.",
+        "A friend signals from backstage, ready with a backup prerecorded demo."
+      ],
+      "options": [
+        { "text": "Switch to the backup video.", "arc": "robot-companion" },
+        { "text": "Debug live onstage.", "arc": "cyber-race" }
+      ]
+    },
+    "mentor-meet": {
+      "title": "Passing the Torch",
+      "story": [
+        "Cyan meets the young dev in a cozy café, sharing stories of early coding blunders over mint tea.",
+        "In gratitude, the mentee gifts Cyan a prototype robot sidekick named Byte, eager to learn.",
+        "Byte’s firmware is unstable and may wipe itself without urgent patches."
+      ],
+      "options": [
+        { "text": "Fix Byte immediately.", "arc": "robot-companion" },
+        { "text": "Send Byte to a robotics lab.", "arc": "ai-lab" }
+      ]
+    },
+    "robot-companion": {
+      "title": "Metallic Friendship",
+      "story": [
+        "Byte whirs to life, projecting holographic emojis that mimic Cyan’s mood with endearing clumsiness.",
+        "Together they build a coral-reef monitoring drone that combines Byte’s hardware with Cyan’s code.",
+        "Funding agencies show interest, but they require commercial licensing."
+      ],
+      "options": [
+        { "text": "License commercially for scale.", "arc": "open-source" },
+        { "text": "Keep it open and crowdfund.", "arc": "ocean-server" }
+      ]
+    },
+    "security-breach": {
+      "title": "Court of Code",
+      "story": [
+        "Police cordon off the hackathon while lawyers debate digital sabotage laws, and headlines splatter across tech blogs.",
+        "Cyan’s statement exposes systemic flaws in event security, pushing organizers to overhaul their infrastructure.",
+        "They invite him to chair a new ethics board."
+      ],
+      "options": [
+        { "text": "Accept ethics leadership.", "arc": "ai-lab" },
+        { "text": "Return to building cool tech.", "arc": "open-source" }
+      ]
+    },
+    "cyber-race": {
+      "title": "Packet Sprint",
+      "story": [
+        "A televised code-sprint pits finalists in a high-stakes challenge to optimize planetary-scale routing tables.",
+        "Cyan’s fingers blur, but Byte pings in with stats showing the network straining under energy consumption.",
+        "Winning is close, yet sustainability hangs in the balance."
+      ],
+      "options": [
+        { "text": "Push for raw speed.", "arc": "victory-lap" },
+        { "text": "Throttle for efficiency, maybe lose.", "arc": "open-source" }
+      ]
+    },
+    "open-source": {
+      "title": "Commons of Code",
+      "story": [
+        "Cyan publishes all findings in a permissive license, sparking a wave of forks that adapt the tools for everything from education to deep-sea research.",
+        "He feels richer in community than any prize money could offer.",
+        "Yet grant committees keep nudging him toward profit to sustain servers."
+      ],
+      "options": [
+        { "text": "Launch a nonprofit foundation.", "arc": "ocean-server" },
+        { "text": "Seek venture funding.", "arc": "ai-lab" }
+      ]
+    },
+    "ai-lab": {
+      "title": "Skies of Silicon",
+      "story": [
+        "In a futuristic campus floating above the bay by helium balloons, Cyan leads an AI ethics incubator where Byte teaches kindergarten robots.",
+        "Corporate investors pressure for faster, riskier deployments.",
+        "A board vote looms that could change the lab’s soul."
+      ],
+      "options": [
+        { "text": "Fight for cautious integrity.", "arc": "victory-lap" },
+        { "text": "Accept compromise for resources.", "arc": "sky-city" }
+      ]
+    },
+    "ocean-server": {
+      "title": "Deep-Blue Servers",
+      "story": [
+        "Solar-powered ocean buoys host Cyan’s reef-monitoring code, broadcasting vivid reef health metrics to classrooms worldwide.",
+        "Hurricanes threaten to topple the fragile network unless new weather-adaptive algorithms deploy immediately.",
+        "Byte suggests redirecting unused supercomputer cycles from a gaming company."
+      ],
+      "options": [
+        { "text": "Partner with gamers for compute.", "arc": "sky-city" },
+        {
+          "text": "Rewrite algorithms for local resilience.",
+          "arc": "victory-lap"
+        }
+      ]
+    },
+    "sky-city": {
+      "title": "Citadel of Circuits",
+      "story": [
+        "A futuristic airborne city offers Cyan skyscraper labs and fleets of drones, but data rights are murky.",
+        "Byte’s glow dims as corporate clauses threaten to lock source code away forever.",
+        "Cyan must decide what progress truly means."
+      ],
+      "options": [
+        { "text": "Walk away and protect freedom.", "arc": "open-source" },
+        { "text": "Stay and reform from within.", "arc": "victory-lap" }
+      ]
+    },
+    "victory-lap": {
+      "title": "Code for Tomorrow",
+      "story": [
+        "Cyan delivers a rousing keynote celebrating community, innovation, and the courage to iterate ethically.",
+        "A standing ovation thunders while Byte projects fireworks shaped like coral and code brackets.",
+        "At last, Cyan heads home, dreaming of quieter nights spent mentoring the next wave."
+      ],
+      "options": [
+        { "text": "Begin next bold project.", "arc": "code-quest" },
+        { "text": "Enjoy well-earned rest.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Recharge in Familiar Light",
+      "story": [
+        "Back in his tidy workshop, Cyan hangs a framed circuit board signed by friends around the globe.",
+        "Byte hums lullabies while server LEDs flicker like friendly stars.",
+        "Adventure may call again, but tonight the only code he runs is music for peaceful dreams."
+      ],
+      "options": []
+    }
+  },
+
+  "brown": {
+    "intro": {
+      "title": "Guardian of the Grove",
+      "story": [
+        "Brown Gopher tightens his ranger vest as dawn mist curls between towering pines; today marks his first day as Willowmere’s junior forest guardian.",
+        "Radio chatter buzzes with news of suspicious smoke signals deep in the northern ridge, while the local library hosts an ancient-map exhibition he promised to attend.",
+        "Duty and curiosity tug in opposite directions."
+      ],
+      "options": [
+        { "text": "Answer the smoke alarm.", "arc": "forest-patrol" },
+        { "text": "Visit the library maps first.", "arc": "library-study" }
+      ]
+    },
+    "forest-patrol": {
+      "title": "Trail of Ash",
+      "story": [
+        "Brown hustles up switchbacks where charred leaves crackle underfoot, uncovering a hidden campsite with embers still glowing.",
+        "A frightened fawn trembles nearby, and distant thunder hints at a coming storm that could turn sparks into catastrophe.",
+        "He must choose an immediate water-bucket chain or radio for aerial support."
+      ],
+      "options": [
+        { "text": "Organize villagers for buckets.", "arc": "wildfire" },
+        { "text": "Call for helicopter water drop.", "arc": "animal-rescue" }
+      ]
+    },
+    "library-study": {
+      "title": "Secrets on Parchment",
+      "story": [
+        "Within oak-paneled halls, Brown pores over a 200-year-old map depicting a ‘Hidden Grove’ said to house trees that glow at night.",
+        "Legend claims these trees purify nearby rivers—a boon against recent pollution.",
+        "But reaching the grove requires trekking through territory prone to rock slides."
+      ],
+      "options": [
+        { "text": "Gather gear and seek the grove.", "arc": "hidden-grove" },
+        { "text": "Stay to digitize the maps first.", "arc": "eco-fair" }
+      ]
+    },
+    "wildfire": {
+      "title": "Ring of Flame",
+      "story": [
+        "Villagers form a frantic bucket brigade, and Brown leads them with calm precision even as gusts fan sparks into snarling tongues.",
+        "When a wind shift traps two volunteers, Brown must spring a daring rescue using a fallen log as a bridge.",
+        "Time and smoke grow thick."
+      ],
+      "options": [
+        { "text": "Dash across the burning gap.", "arc": "rescue-mission" },
+        { "text": "Divert water to quell flames first.", "arc": "river-flood" }
+      ]
+    },
+    "animal-rescue": {
+      "title": "Sky-Bucket Brigade",
+      "story": [
+        "Rotor blades thump overhead, dousing flames while Brown coaxes terrified wildlife toward safety tunnels under the ridge road.",
+        "A baby bear cub refuses to leave its smoky den.",
+        "Brown can lure it with honey or venture inside."
+      ],
+      "options": [
+        { "text": "Use honey as lure.", "arc": "animal-rescue" },
+        { "text": "Crawl into the den.", "arc": "rescue-mission" }
+      ]
+    },
+    "hidden-grove": {
+      "title": "Luminescent Leaves",
+      "story": [
+        "After hours of scrambling, Brown beholds trees glowing gentle jade beneath moonlight, their sap sparkling like stars.",
+        "He collects samples but hears rumbling boulders above.",
+        "Protect the grove or escape with proof?"
+      ],
+      "options": [
+        {
+          "text": "Shield saplings with makeshift barriers.",
+          "arc": "tree-planting"
+        },
+        { "text": "Grab samples and flee.", "arc": "cave-mystery" }
+      ]
+    },
+    "eco-fair": {
+      "title": "Voices for Earth",
+      "story": [
+        "Digitized maps unveil waterways long forgotten, inspiring Brown to host an eco-fair showcasing sustainable crafts and local produce.",
+        "Crowds gather, but a corporate logging rep arrives seeking access to new parcels.",
+        "Brown can debate publicly or negotiate privately."
+      ],
+      "options": [
+        { "text": "Publicly debate.", "arc": "community-award" },
+        { "text": "Negotiate in private.", "arc": "ranger-training" }
+      ]
+    },
+    "rescue-mission": {
+      "title": "Courage Under Fire",
+      "story": [
+        "Smoke stings his eyes as Brown scoops the stranded soul—human or bear cub—into his arms, sprinting across crackling debris.",
+        "The crowd erupts in relieved cheers, but Brown’s singed fur reminds him of risks yet ahead.",
+        "News outlets hail a hero as he collapses into welcome rain."
+      ],
+      "options": [
+        { "text": "Take a rest back home.", "arc": "quiet-evening" },
+        {
+          "text": "Sign up for advanced ranger training.",
+          "arc": "ranger-training"
+        }
+      ]
+    },
+    "river-flood": {
+      "title": "Waters Run Wild",
+      "story": [
+        "Heavy storm clouds burst, flooding the river and threatening downstream villages with a sudden deluge of ash-dark water.",
+        "Brown must choose to dam a tributary with sandbags or guide an evacuation.",
+        "Both paths test his leadership."
+      ],
+      "options": [
+        { "text": "Build emergency dams.", "arc": "mountain-hike" },
+        { "text": "Lead evacuation.", "arc": "lost-hiker" }
+      ]
+    },
+    "tree-planting": {
+      "title": "Saplings of Hope",
+      "story": [
+        "Brown organizes a seedling drive, teaching children how glowing trees heal soil.",
+        "Media cameras capture the moment saplings take root in the town square.",
+        "Yet an unseasonal frost threatens the fragile shoots."
+      ],
+      "options": [
+        { "text": "Install heat lamps overnight.", "arc": "winter-watch" },
+        {
+          "text": "Move saplings indoors temporarily.",
+          "arc": "spring-blossom"
+        }
+      ]
+    },
+    "cave-mystery": {
+      "title": "Echoes Below",
+      "story": [
+        "While escaping the rockslide, Brown tumbles into a cavern where prehistoric paintings mirror the glowing sap’s pattern.",
+        "A narrow tunnel leads deeper, perhaps to forgotten water sources.",
+        "He can explore or climb out."
+      ],
+      "options": [
+        { "text": "Explore deeper tunnels.", "arc": "mountain-hike" },
+        { "text": "Climb out and report.", "arc": "community-award" }
+      ]
+    },
+    "mountain-hike": {
+      "title": "Peak Decisions",
+      "story": [
+        "High winds whip across a ridge where Brown spots illegal poachers setting snares.",
+        "Confrontation could be dangerous without backup.",
+        "He can radio authorities or film evidence first."
+      ],
+      "options": [
+        { "text": "Confront immediately.", "arc": "lost-hiker" },
+        { "text": "Gather video evidence.", "arc": "spring-blossom" }
+      ]
+    },
+    "lost-hiker": {
+      "title": "Search at Dusk",
+      "story": [
+        "A distress call reveals a hiker missing near the gorge; Brown navigates treacherous ledges guided only by the glow of sap-coated sticks.",
+        "Night falls, and thunder rolls closer.",
+        "He can build a signal fire or scout the gorge floor."
+      ],
+      "options": [
+        { "text": "Build signal fire.", "arc": "winter-watch" },
+        { "text": "Descend the gorge.", "arc": "cave-mystery" }
+      ]
+    },
+    "ranger-training": {
+      "title": "Lessons in Leadership",
+      "story": [
+        "At regional headquarters, veteran rangers drill Brown in rope rescues, wildfire analytics, and wildlife diplomacy.",
+        "A surprise exam sends recruits into simulated blizzard conditions.",
+        "Brown draws on homegrown grit."
+      ],
+      "options": [
+        { "text": "Ace the exam and return.", "arc": "community-award" },
+        { "text": "Request extended mentorship.", "arc": "winter-watch" }
+      ]
+    },
+    "winter-watch": {
+      "title": "Frost Patrol",
+      "story": [
+        "During the coldest night, Brown patrols silent woods shimmering in moonlit ice, ensuring saplings stay warm.",
+        "Auroras dance overhead, yet distant howls hint at wolves near town.",
+        "He can investigate or stay with saplings."
+      ],
+      "options": [
+        { "text": "Track the wolves.", "arc": "animal-rescue" },
+        { "text": "Guard the grove.", "arc": "spring-blossom" }
+      ]
+    },
+    "spring-blossom": {
+      "title": "Blooming Triumph",
+      "story": [
+        "Spring sun melts frost, revealing saplings alive and thriving; petals drift like confetti.",
+        "Brown hosts a festival celebrating renewal, where townsfolk plant thousands more seeds.",
+        "A reporter nominates him for a national conservation medal."
+      ],
+      "options": [
+        { "text": "Attend the ceremony.", "arc": "community-award" },
+        { "text": "Stay humble and keep working.", "arc": "quiet-evening" }
+      ]
+    },
+    "community-award": {
+      "title": "Medal of the Woodlands",
+      "story": [
+        "Dressed in polished ranger greens, Brown accepts a shimmering acorn-shaped medal amid a roaring crowd.",
+        "He dedicates the honor to every volunteer who fought flames and frost alongside him.",
+        "Opportunities pour in from global parks seeking his guidance."
+      ],
+      "options": [
+        { "text": "Travel abroad to share wisdom.", "arc": "heritage-trail" },
+        { "text": "Focus on local stewardship.", "arc": "quiet-evening" }
+      ]
+    },
+    "quiet-evening": {
+      "title": "Crackling Hearth",
+      "story": [
+        "Brown sits by his cabin fire, carving tiny wooden animals as gifts for rescued youngsters.",
+        "Outside, saplings glow softly, reflecting in his warm brown eyes.",
+        "Peace settles like soft mulch over rich soil."
+      ],
+      "options": [
+        { "text": "Plan next patrol.", "arc": "forest-patrol" },
+        { "text": "Let the night simply drift.", "arc": "home" }
+      ]
+    },
+    "heritage-trail": {
+      "title": "Footsteps of Ancestors",
+      "story": [
+        "Guiding international rangers along Willowmere’s heritage trail, Brown shares folklore embedded in moss-covered stones.",
+        "He realizes local culture grows as vital as trees in sustaining communities.",
+        "Returning migrants cheer him as bridge-builder between worlds."
+      ],
+      "options": [
+        { "text": "Write a conservation book.", "arc": "community-award" },
+        { "text": "Retire quietly.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Roots Run Deep",
+      "story": [
+        "The forest hums with night insects while Brown brews pine-needle tea, content beneath sturdy rafters he helped mill.",
+        "His ranger badge hangs beside the glowing sap sample, a reminder that heroism sprouts from simple acts of care.",
+        "Tomorrow’s dawn will bring fresh trails, but tonight the woods sing lullabies of earned rest."
+      ],
+      "options": []
+    }
+  },
+
+  "green": {
+    "intro": {
+      "title": "Seeds of Ambition",
+      "story": [
+        "Green Gopher gazes over an abandoned lot in town, picturing terraced vegetable beds bursting with life.",
+        "An email pings about a city-wide garden festival contest with a grand prize grant, yet his elderly neighbor needs help repairing her greenhouse roof today.",
+        "Duty and dream root in the same soil."
+      ],
+      "options": [
+        { "text": "Rush to register for the festival.", "arc": "seed-dream" },
+        { "text": "Help the neighbor first.", "arc": "greenhouse" }
+      ]
+    },
+    "seed-dream": {
+      "title": "Plotting the Plot",
+      "story": [
+        "Green drafts blueprints featuring rainwater capture barrels and pollinator pathways, but funding is tight.",
+        "A venture capitalist offers investment in exchange for commercializing half the beds.",
+        "He can accept or start a grassroots fundraiser."
+      ],
+      "options": [
+        { "text": "Accept investor deal.", "arc": "market-stall" },
+        { "text": "Launch fundraiser.", "arc": "garden-festival" }
+      ]
+    },
+    "greenhouse": {
+      "title": "Glass House Gratitude",
+      "story": [
+        "On the wobbly roof, Green replaces cracked panes, discovering rare heirloom seeds forgotten in dusty jars.",
+        "The neighbor gifts them to him, believing they bring luck.",
+        "Plant them now or save for contest day?"
+      ],
+      "options": [
+        { "text": "Plant immediately.", "arc": "pest-invasion" },
+        { "text": "Store for later.", "arc": "garden-festival" }
+      ]
+    },
+    "market-stall": {
+      "title": "Harvest Hustle",
+      "story": [
+        "With investor cash, Green opens a trendy organic stall, but branding meetings steal time from actual planting.",
+        "Customers praise his vision, yet he feels disconnected from the soil.",
+        "The investor pushes for rapid expansion."
+      ],
+      "options": [
+        { "text": "Scale up commercial farms.", "arc": "urban-rooftop" },
+        { "text": "Break contract and go grassroots.", "arc": "compost-quest" }
+      ]
+    },
+    "garden-festival": {
+      "title": "Community Blooms",
+      "story": [
+        "Neighbors pledge tools and time, transforming the abandoned lot into a vibrant patchwork of greens and blossoms.",
+        "A rival gardener spreads rumors that Green uses GMO seeds.",
+        "He must present transparent seed logs or ignore gossip and keep working."
+      ],
+      "options": [
+        { "text": "Show transparent logs.", "arc": "bee-swarm" },
+        { "text": "Ignore and focus.", "arc": "pest-invasion" }
+      ]
+    },
+    "pest-invasion": {
+      "title": "Bugged Out",
+      "story": [
+        "Armyworms devour young leaves overnight, and pesticide would violate contest eco-rules.",
+        "Ladybugs are scarce this season, but a distant farm sells them at a steep price.",
+        "Borrow funds or devise homemade traps?"
+      ],
+      "options": [
+        { "text": "Buy ladybugs.", "arc": "bee-swarm" },
+        { "text": "DIY traps.", "arc": "compost-quest" }
+      ]
+    },
+    "compost-quest": {
+      "title": "Golden Soil",
+      "story": [
+        "Green begins a town-wide compost drive, collecting coffee grounds and egg shells that soon steam like dragon breath.",
+        "The rich mix revives plants and earns a local news spread.",
+        "A chef requests exclusive rights to the garden’s produce."
+      ],
+      "options": [
+        { "text": "Partner with the chef.", "arc": "night-market" },
+        { "text": "Keep produce community-free.", "arc": "river-cleanup" }
+      ]
+    },
+    "bee-swarm": {
+      "title": "Buzz of Hope",
+      "story": [
+        "Imported ladybugs arrive alongside a surprise swarm of gentle bees whose hive was displaced by construction.",
+        "Pollination skyrockets yields, but neighbors fear stings.",
+        "Green must build a viewable observation hive or relocate the bees."
+      ],
+      "options": [
+        { "text": "Build observation hive.", "arc": "art-show" },
+        { "text": "Relocate bees to countryside.", "arc": "city-farm" }
+      ]
+    },
+    "art-show": {
+      "title": "Art in Bloom",
+      "story": [
+        "Local artists paint murals on the observation hive, blending ecology and culture.",
+        "Festival judges extend a new award category for community art.",
+        "But murals may disqualify the plot from ‘pure horticulture’ points."
+      ],
+      "options": [
+        { "text": "Keep murals and risk points.", "arc": "treehouse" },
+        { "text": "Remove murals for compliance.", "arc": "night-market" }
+      ]
+    },
+    "city-farm": {
+      "title": "Concrete Harvests",
+      "story": [
+        "Green helps convert an old parking deck into a vertical farm glowing under LED sunlight.",
+        "Rent is high, but yields impress city officials who offer tax breaks.",
+        "He can expand or focus on original lot."
+      ],
+      "options": [
+        { "text": "Expand vertical farm.", "arc": "urban-rooftop" },
+        { "text": "Return to ground project.", "arc": "river-cleanup" }
+      ]
+    },
+    "river-cleanup": {
+      "title": "Waters Run Clear",
+      "story": [
+        "Inspired by glowing sap stories, Green leads volunteers to remove trash and plant riparian grasses along the river.",
+        "Crayfish return, and the water smells of fresh rain again.",
+        "But heavy metals lurk beneath silt."
+      ],
+      "options": [
+        {
+          "text": "Campaign for industrial accountability.",
+          "arc": "climate-summit"
+        },
+        { "text": "Add phytoremediation beds.", "arc": "treehouse" }
+      ]
+    },
+    "treehouse": {
+      "title": "Canopy Council",
+      "story": [
+        "Green builds a treehouse classroom overlooking the gardens where kids learn soil science amid chirping birds.",
+        "An unexpected thunderstorm threatens to rip it apart.",
+        "Reinforce now or evacuate students first?"
+      ],
+      "options": [
+        { "text": "Reinforce structure.", "arc": "volcano-soil" },
+        { "text": "Evacuate quickly.", "arc": "night-market" }
+      ]
+    },
+    "night-market": {
+      "title": "Starlit Stalls",
+      "story": [
+        "Under lantern glow, Green sells herb bundles to fund garden upkeep, while storytellers recite myths about seed spirits.",
+        "Health inspectors arrive for surprise checks.",
+        "Stand tall or pay a hasty bribe?"
+      ],
+      "options": [
+        { "text": "Comply proudly.", "arc": "award-ceremony" },
+        { "text": "Offer bribe to speed inspection.", "arc": "desert-expo" }
+      ]
+    },
+    "urban-rooftop": {
+      "title": "Heights of Harvest",
+      "story": [
+        "Skyscraper roofs sprout lettuce waterfalls under Green’s guidance, turning city skylines into emerald crowns.",
+        "But a zoning law revision threatens rooftop agriculture.",
+        "Lobby officials or relocate operations?"
+      ],
+      "options": [
+        { "text": "Lobby city hall.", "arc": "climate-summit" },
+        { "text": "Relocate to suburbs.", "arc": "jungle-study" }
+      ]
+    },
+    "desert-expo": {
+      "title": "Soil of Fire",
+      "story": [
+        "A cactus research symposium in the desert invites Green to showcase drought-proof greens grown from heirloom seeds.",
+        "He discovers volcanic ash can triple nutrient density.",
+        "Collect ash or prioritize seed preservation?"
+      ],
+      "options": [
+        { "text": "Collect ash.", "arc": "volcano-soil" },
+        { "text": "Protect seeds first.", "arc": "award-ceremony" }
+      ]
+    },
+    "volcano-soil": {
+      "title": "Fertile Flames",
+      "story": [
+        "Scaling a dormant volcano, Green harvests black soil warm as toast, but rumblings hint at reawakening.",
+        "He can flee or stay to finish gathering enough for all townspeople."
+      ],
+      "options": [
+        { "text": "Finish gathering.", "arc": "jungle-study" },
+        { "text": "Retreat immediately.", "arc": "award-ceremony" }
+      ]
+    },
+    "jungle-study": {
+      "title": "Roots of Plenty",
+      "story": [
+        "An invitation arrives to study ancient terrace farms in a tropical jungle where vines coil like emerald serpents.",
+        "Green learns indigenous techniques that outshine modern hydroponics.",
+        "Publish findings or keep methods sacred?"
+      ],
+      "options": [
+        { "text": "Publish globally.", "arc": "climate-summit" },
+        { "text": "Respect secrecy.", "arc": "award-ceremony" }
+      ]
+    },
+    "climate-summit": {
+      "title": "Voices at the Summit",
+      "story": [
+        "On an international stage, Green delivers impassioned pleas for sustainable city farming, waving photos of kids smiling beside buzzing bees.",
+        "Delegates propose funding, but only if he accepts corporate oversight.",
+        "He must weigh scale versus independence."
+      ],
+      "options": [
+        { "text": "Accept funding.", "arc": "award-ceremony" },
+        { "text": "Decline and stay grassroots.", "arc": "home" }
+      ]
+    },
+    "award-ceremony": {
+      "title": "Crown of Leaves",
+      "story": [
+        "The garden festival crowns Green with a laurel wreath woven from herb sprigs and biodegradable confetti.",
+        "Cheers echo through lots once barren, now alive with vegetables and friendships.",
+        "He feels roots stretching through the community, binding them together."
+      ],
+      "options": [
+        { "text": "Plan new gardens abroad.", "arc": "desert-expo" },
+        { "text": "Tend quietly at home.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Ever-Green Heart",
+      "story": [
+        "In the twilight, Green mulches soil that smells like rain-kissed memories and hums while fireflies blink approval.",
+        "Seedlings whisper promises of tomorrow’s harvest.",
+        "Wherever destiny sprouts next, tonight’s gratitude grows tallest."
+      ],
+      "options": []
+    }
+  },
+
+  "pink": {
+    "intro": {
+      "title": "Palette of Dreams",
+      "story": [
+        "Pink Gopher twirls a paintbrush, cheeks flecked magenta, as an email arrives: she has been short-listed for an art residency in Paris!",
+        "Yet her hometown gallery needs her murals finished before the summer festival begins.",
+        "One road leads to world acclaim; the other, to cherished community pride."
+      ],
+      "options": [
+        { "text": "Accept Paris residency.", "arc": "paris-flight" },
+        { "text": "Stay and finish murals first.", "arc": "art-contest" }
+      ]
+    },
+    "art-contest": {
+      "title": "Local Colors",
+      "story": [
+        "The hometown contest lacks big money prizes but overflows with joyful kids eager to splatter colors.",
+        "Pink mentors them, yet whispers in the crowd claim her style is ‘too foreign’.",
+        "Ignore the gossip or launch a public workshop?"
+      ],
+      "options": [
+        { "text": "Host public workshop.", "arc": "street-murals" },
+        { "text": "Ignore and focus on murals.", "arc": "home-studio" }
+      ]
+    },
+    "paris-flight": {
+      "title": "City of Light",
+      "story": [
+        "Pink arrives in Paris, eyes sparkling at gold domes and evening café chatter about avant-garde movements.",
+        "The residency pairs her with a stoic sculptor who dismisses her pastel palette as childish.",
+        "Collaborate or prove him wrong solo?"
+      ],
+      "options": [
+        { "text": "Collaborate on mixed media.", "arc": "gallery-night" },
+        { "text": "Forge ahead solo.", "arc": "masterpiece" }
+      ]
+    },
+    "home-studio": {
+      "title": "Night in Neon",
+      "story": [
+        "Pink paints late into the night, neon signs outside reflecting off wet brushstrokes.",
+        "A storm surge leaks through her studio roof, threatening to ruin canvases.",
+        "Move art or patch roof first?"
+      ],
+      "options": [
+        { "text": "Save the canvases.", "arc": "lost-paint" },
+        { "text": "Patch roof quickly.", "arc": "color-festival" }
+      ]
+    },
+    "street-murals": {
+      "title": "Walls that Sing",
+      "story": [
+        "Pink invites townsfolk to paint wishes on a long cement wall, and laughter echoes as color blooms across grey stone.",
+        "Local critics soften, yet a rival street artist tags over her section at dawn.",
+        "Erase the tag or incorporate it?"
+      ],
+      "options": [
+        { "text": "Incorporate as collaboration.", "arc": "color-festival" },
+        { "text": "Erase and confront rival.", "arc": "lost-paint" }
+      ]
+    },
+    "gallery-night": {
+      "title": "Lights and Shadows",
+      "story": [
+        "Spotlights bathe a shared sculpture-painting hybrid that fuses marble swirls with airy pink splashes; crowds gasp.",
+        "Yet the stoic sculptor takes full credit in interviews.",
+        "Challenge him publicly or let art speak louder?"
+      ],
+      "options": [
+        { "text": "Publicly confront.", "arc": "museum-heist" },
+        { "text": "Stay silent.", "arc": "fashion-show" }
+      ]
+    },
+    "color-festival": {
+      "title": "Hue Man Parade",
+      "story": [
+        "During the festival, colored powders explode in rainbow clouds while Pink leads a dance troupe covered in her custom pigments.",
+        "A sudden rain threatens to wash color down drains.",
+        "Cover artwork or embrace the flowing mixes?"
+      ],
+      "options": [
+        { "text": "Cover quickly.", "arc": "sculpture-park" },
+        { "text": "Let colors flow.", "arc": "midnight-cafe" }
+      ]
+    },
+    "lost-paint": {
+      "title": "Spilled Spectrum",
+      "story": [
+        "Pink slips, knocking over gallons of rare pigment that swirl into a breathtaking accidental marble effect on the floor.",
+        "An art critic happens by, declaring it genius modern expression.",
+        "Frame the floorboards or scrap them?"
+      ],
+      "options": [
+        { "text": "Preserve as installation.", "arc": "sculpture-park" },
+        { "text": "Clean up and start over.", "arc": "opera-visit" }
+      ]
+    },
+    "sculpture-park": {
+      "title": "Stone and Spray",
+      "story": [
+        "Curators invite Pink to design interactive color projections across a new outdoor sculpture park.",
+        "A funding sponsor demands corporate logos integrated subtly.",
+        "Agree or refuse?"
+      ],
+      "options": [
+        { "text": "Agree; integrate logos tastefully.", "arc": "fashion-show" },
+        { "text": "Refuse and risk budget.", "arc": "auction" }
+      ]
+    },
+    "museum-heist": {
+      "title": "Frames Gone Missing",
+      "story": [
+        "Pink storms the museum only to discover her shared piece stolen, replaced by a blank canvas with cryptic pink fingerprints.",
+        "Security suspects her involvement.",
+        "Prove innocence by investigating or flee to avoid scandal?"
+      ],
+      "options": [
+        { "text": "Investigate theft.", "arc": "midnight-cafe" },
+        { "text": "Leave Paris discreetly.", "arc": "travel-exhibition" }
+      ]
+    },
+    "fashion-show": {
+      "title": "Runway Reverie",
+      "story": [
+        "Designers turn Pink’s pigments into fabric prints that glide down runways amid flash bulbs.",
+        "A model trips, ripping the final dress minutes before show’s end.",
+        "Patch swiftly or redesign on the spot?"
+      ],
+      "options": [
+        { "text": "Patch swiftly backstage.", "arc": "opera-visit" },
+        { "text": "Redesign live with scissors.", "arc": "masterpiece" }
+      ]
+    },
+    "opera-visit": {
+      "title": "Song and Canvas",
+      "story": [
+        "At a historic opera, Pink paints live on stage while tenors’ voices cascade around her, each note guiding a stroke.",
+        "A malfunction drops glitter buckets mid-aria, chaos twinkling like stardust.",
+        "Turn glitter into art or halt the show?"
+      ],
+      "options": [
+        { "text": "Transform chaos into climax.", "arc": "masterpiece" },
+        { "text": "Stop and clean stage.", "arc": "auction" }
+      ]
+    },
+    "midnight-cafe": {
+      "title": "Café of Lost Artists",
+      "story": [
+        "In a candlelit café that never closes, Pink meets artists who barter poems for coffee.",
+        "They invite her to a secret rooftop where city lights blend with stars in perfect gradients.",
+        "Capture the moment on canvas or simply bask?"
+      ],
+      "options": [
+        { "text": "Paint the moment.", "arc": "masterpiece" },
+        { "text": "Relax and absorb.", "arc": "midnight-cafe" }
+      ]
+    },
+    "masterpiece": {
+      "title": "Canvas of the Soul",
+      "story": [
+        "After weeks of trials, Pink unveils a panoramic piece that tells her journey through swirling ribbons of pastel and shadow.",
+        "Viewers stand silent, some moved to tears.",
+        "She can auction it for charity or donate to her hometown gallery."
+      ],
+      "options": [
+        { "text": "Auction for charity.", "arc": "auction" },
+        { "text": "Donate to hometown.", "arc": "travel-exhibition" }
+      ]
+    },
+    "auction": {
+      "title": "Bids and Butterflies",
+      "story": [
+        "The masterpiece shatters records at auction; Pink’s ears roar with cascading numbers seemingly detached from color’s true value.",
+        "A collector offers a private island studio.",
+        "Accept or stay accessible to the public?"
+      ],
+      "options": [
+        { "text": "Island solitude.", "arc": "return-home" },
+        { "text": "Stay public and teach.", "arc": "art-school" }
+      ]
+    },
+    "travel-exhibition": {
+      "title": "Suitcase Gallery",
+      "story": [
+        "Pink packs modular canvases that fold like origami, touring remote towns where galleries are barns and laughter is currency.",
+        "Road dust mingles with pigments, creating new hues.",
+        "Continue forever or settle?"
+      ],
+      "options": [
+        { "text": "Keep touring.", "arc": "return-home" },
+        { "text": "Settle down to teach.", "arc": "art-school" }
+      ]
+    },
+    "return-home": {
+      "title": "Splash of Memory",
+      "story": [
+        "Pink returns to her hometown wall, now weathered but beloved, and adds one final swirl that ties all journeys into a single, unbroken ribbon.",
+        "Kids recognize Parisian textures next to local doodles, learning art’s boundless borders.",
+        "Pink breathes in chalk-dust air with contented pride."
+      ],
+      "options": [
+        { "text": "Plan next grand mural.", "arc": "street-murals" },
+        { "text": "Rest satisfied.", "arc": "home" }
+      ]
+    },
+    "art-school": {
+      "title": "Lessons in Hue",
+      "story": [
+        "Pink opens a vibrant art school where each classroom is painted a distinct color wheel segment.",
+        "Students invent shades never before named, their laughter echoing like paint-splats.",
+        "A grant offers expansion abroad."
+      ],
+      "options": [
+        { "text": "Expand globally.", "arc": "travel-exhibition" },
+        { "text": "Keep school intimate.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Pastel Peace",
+      "story": [
+        "As sun sets, Pink dips her brush into leftover pigment, flicking tiny hearts onto her studio window that glow in dusk light.",
+        "Journey proved color is language; she speaks it fluently now.",
+        "Tomorrow’s palette awaits, but tonight the canvas is calm."
+      ],
+      "options": []
+    }
+  },
+
+  "purple": {
+    "intro": {
+      "title": "Map of Whispers",
+      "story": [
+        "Purple Gopher discovers an iridescent parchment in her attic—landmarks rearrange themselves when moonbeams touch its surface.",
+        "Legend tells of an ancient library storing wishes in crystal bottles, and the map appears to lead there.",
+        "Yet her friend’s birthday picnic is today, promising laughter under lilac trees."
+      ],
+      "options": [
+        { "text": "Follow the map immediately.", "arc": "map-discovery" },
+        { "text": "Attend the picnic first.", "arc": "ignore-map" }
+      ]
+    },
+    "map-discovery": {
+      "title": "Forest of Echoes",
+      "story": [
+        "Purple steps into a misty forest where trees hum notes that harmonize with her heartbeat.",
+        "A fork splits toward silver-leaf paths and shadowy brambles.",
+        "Take the luminous trail or brave the dark?"
+      ],
+      "options": [
+        { "text": "Follow silver leaves.", "arc": "enchanted-lake" },
+        { "text": "Enter shadow brambles.", "arc": "forest-ruins" }
+      ]
+    },
+    "ignore-map": {
+      "title": "Lilac Laughs",
+      "story": [
+        "At the picnic, Purple’s friends tease her for bringing an ‘imaginary’ map, then encourage her to pursue the quest.",
+        "Her best friend hands over a compass said to point toward heart’s desire.",
+        "Start journey at dawn or research legends first?"
+      ],
+      "options": [
+        { "text": "Start journey at dawn.", "arc": "forest-ruins" },
+        { "text": "Research legends.", "arc": "lost-library" }
+      ]
+    },
+    "forest-ruins": {
+      "title": "Stone Guardians",
+      "story": [
+        "Ancient statues half-buried in moss adjust their gaze as Purple passes, testing her courage.",
+        "One whispers riddles about time twisting like vines.",
+        "Answer riddles or sneak by?"
+      ],
+      "options": [
+        { "text": "Answer riddles.", "arc": "shadow-village" },
+        { "text": "Sneak quietly.", "arc": "crystal-bridge" }
+      ]
+    },
+    "lost-library": {
+      "title": "Shelves Beyond Years",
+      "story": [
+        "Research reveals the library surfaces only during total lunar eclipses, lit by bioluminescent vines.",
+        "An eclipse is predicted tonight across the desert.",
+        "Travel immediately or wait for local eclipse years away?"
+      ],
+      "options": [
+        { "text": "Cross desert now.", "arc": "desert-oracle" },
+        { "text": "Wait locally and prepare.", "arc": "enchanted-lake" }
+      ]
+    },
+    "enchanted-lake": {
+      "title": "Mirror of Moons",
+      "story": [
+        "A lake glows violet, reflecting constellations unknown to any chart, and steppingstones rise only when lyrics are sung.",
+        "Purple recalls lullabies from childhood.",
+        "Sing true lyrics or improvise?"
+      ],
+      "options": [
+        { "text": "Sing lullaby.", "arc": "sky-temple" },
+        { "text": "Improvise melody.", "arc": "crystal-bridge" }
+      ]
+    },
+    "shadow-village": {
+      "title": "Town at Twilight",
+      "story": [
+        "Villagers made of shifting shadows trade stories instead of coins; they offer guidance if Purple surrenders one memory.",
+        "Give up memory of first snowfall or decline?"
+      ],
+      "options": [
+        { "text": "Trade memory.", "arc": "mist-garden" },
+        { "text": "Politely decline.", "arc": "crystal-bridge" }
+      ]
+    },
+    "crystal-bridge": {
+      "title": "Fractured Steps",
+      "story": [
+        "A bridge of floating amethyst shards stretches over a misty chasm, humming with soft light.",
+        "Crystals rearrange with every step, demanding agile puzzle solving.",
+        "Take time to study pattern or sprint trusting intuition?"
+      ],
+      "options": [
+        { "text": "Study pattern.", "arc": "mist-garden" },
+        { "text": "Sprint across.", "arc": "mountain-peak" }
+      ]
+    },
+    "desert-oracle": {
+      "title": "Dunes that Dream",
+      "story": [
+        "Starry sands whisper prophecy, leading Purple to a glass tower where an oracle of wind shares glimpses of possible futures.",
+        "The oracle warns that finding the wish library costs a precious sacrifice.",
+        "Proceed or turn back?"
+      ],
+      "options": [
+        { "text": "Proceed regardless.", "arc": "sky-temple" },
+        { "text": "Turn back now.", "arc": "home" }
+      ]
+    },
+    "sky-temple": {
+      "title": "Steps into Clouds",
+      "story": [
+        "Marble stairs ascend into clouds swirling lavender and gold; each step weighs heavy with memories.",
+        "At the summit, a locked gate bars entry until a true name is spoken.",
+        "Speak own name or the map’s name?"
+      ],
+      "options": [
+        { "text": "Speak own name.", "arc": "timeless-tower" },
+        { "text": "Speak map’s name.", "arc": "mist-garden" }
+      ]
+    },
+    "mist-garden": {
+      "title": "Garden of Unsaid Words",
+      "story": [
+        "Flowers here bloom into sentences when touched, but wilting petals erase words forever.",
+        "Purple could reveal secret feelings to a friend through these blooms or harvest petals for gate password clues.",
+        "Choose vulnerability or strategy."
+      ],
+      "options": [
+        { "text": "Reveal feelings.", "arc": "guardian-test" },
+        { "text": "Harvest clues.", "arc": "mountain-peak" }
+      ]
+    },
+    "mountain-peak": {
+      "title": "Edge of Breath",
+      "story": [
+        "Icy winds sculpt the peak into needle-sharp ridges; the map shows a hidden door under a sapphire glacier.",
+        "Climbing rope frays mid-ascent.",
+        "Continue risking fall or retreat to find safer route?"
+      ],
+      "options": [
+        { "text": "Risk and continue.", "arc": "guardian-test" },
+        { "text": "Find safer path.", "arc": "ancient-echo" }
+      ]
+    },
+    "timeless-tower": {
+      "title": "Hourglass Halls",
+      "story": [
+        "Inside the tower, time runs differently; an hour outside equals mere seconds within.",
+        "Shelves of crystal bottles hum with stored wishes, each glowing a different shade.",
+        "Take one wish or restore a wish stolen ages ago?"
+      ],
+      "options": [
+        { "text": "Take a personal wish.", "arc": "wish-well" },
+        { "text": "Restore stolen wish.", "arc": "ancient-echo" }
+      ]
+    },
+    "guardian-test": {
+      "title": "Heart’s Measure",
+      "story": [
+        "A spectral guardian with amethyst wings asks Purple to weigh her desire against the needs of others.",
+        "He offers a choice: leave with single wish or unlock the library for all dreamers.",
+        "Individual joy vs collective hope."
+      ],
+      "options": [
+        { "text": "Choose individual wish.", "arc": "wish-well" },
+        { "text": "Open library to all.", "arc": "legend-written" }
+      ]
+    },
+    "ancient-echo": {
+      "title": "Voice of the Past",
+      "story": [
+        "Echoing corridors replay memories of forgotten travelers, each path leading to lessons of humility.",
+        "Purple glimpses her own life reflected, realizing the journey itself granted growth.",
+        "Accept this insight and return or press onward?"
+      ],
+      "options": [
+        { "text": "Return home wiser.", "arc": "home" },
+        { "text": "Press onward.", "arc": "guardian-test" }
+      ]
+    },
+    "wish-well": {
+      "title": "Ripple of Desire",
+      "story": [
+        "Dropping the chosen wish into a moonlit well, Purple feels warmth surge through fur—her heart’s hidden longing comes alive.",
+        "Yet ripples reveal distant friends suddenly needing her help.",
+        "Enjoy fulfilled wish first or rush to them?"
+      ],
+      "options": [
+        { "text": "Enjoy wish momentarily.", "arc": "home" },
+        { "text": "Rush to friends.", "arc": "legend-written" }
+      ]
+    },
+    "legend-written": {
+      "title": "Pages of Tomorrow",
+      "story": [
+        "By opening access, Purple sees dreamers worldwide awaken to glowing maps, each seeking their own crystal bottles.",
+        "The spectral guardian smiles, noting history will remember her generosity.",
+        "A quill floats, inviting her to pen the first page of this new legend."
+      ],
+      "options": [
+        { "text": "Write the legend.", "arc": "home" },
+        { "text": "Pass quill to next seeker.", "arc": "home" }
+      ]
+    },
+    "home": {
+      "title": "Violet Dawn",
+      "story": [
+        "Back at the attic window, Purple watches sunrise paint rooftops lavender, the map now blank—its purpose fulfilled.",
+        "Friends gather for a belated picnic, sharing stories woven with new magic.",
+        "She tucks compass and memories close, knowing adventures bloom wherever curiosity leads."
+      ],
+      "options": []
+    }
+  }
+}

@@ -8,8 +8,9 @@ import (
 
 // Config holds all configuration for the application
 type Config struct {
-	Server ServerConfig
-	Story  StoryConfig
+	Server   ServerConfig
+	Story    StoryConfig
+	Database DatabaseConfig
 }
 
 // ServerConfig holds server-specific configuration
@@ -28,6 +29,12 @@ type StoryConfig struct {
 	TemplateDir string
 }
 
+// DatabaseConfig holds database configuration
+type DatabaseConfig struct {
+	MongoURI string
+	DBName   string
+}
+
 // Load reads configuration from environment variables with sensible defaults
 func Load() *Config {
 	return &Config{
@@ -39,9 +46,13 @@ func Load() *Config {
 			IdleTimeout:  getEnvAsInt("IDLE_TIMEOUT", 60),
 		},
 		Story: StoryConfig{
-			DataFile:    getEnv("STORY_DATA_FILE", "gopher.json"),
+			DataFile:    getEnv("STORY_DATA_FILE", "gopher_six.json"),
 			StaticDir:   getEnv("STATIC_DIR", "./static"),
 			TemplateDir: getEnv("TEMPLATE_DIR", "./templates"),
+		},
+		Database: DatabaseConfig{
+			MongoURI: getEnv("MONGO_URI", ""),
+			DBName:   getEnv("DB_NAME", "gophertales"),
 		},
 	}
 }

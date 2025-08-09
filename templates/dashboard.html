@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - GopherTales</title>
+    <link rel="stylesheet" href="/static/css/dashboard_styles.css" />
+    <link rel="icon" type="image/svg+xml" href="../static/music.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="welcome-section">
+                <h1>Welcome back, {{ .User.Name }}!</h1>
+                <p>Ready for your next adventure?</p>
+            </div>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+
+        <div class="action-cards">
+            <a href="/selection" class="action-card primary">
+                <div class="card-icon">🚀</div>
+                <div class="card-content">
+                    <h3>Start Adventure</h3>
+                    <p>Choose your gopher and begin your journey</p>
+                </div>
+            </a>
+
+            <a href="/profile" class="action-card secondary">
+                <div class="card-icon">👤</div>
+                <div class="card-content">
+                    <h3>Profile & Stats</h3>
+                    <p>View your progress, bookmarks, and system stats</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="quick-stats">
+            <div class="stat-item">
+                <span class="stat-label">Adventures Started</span>
+                <span class="stat-value">{{ len .User.Progress }}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Bookmarks Saved</span>
+                <span class="stat-value">{{ len .User.Bookmarks }}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Member Since</span>
+                <span class="stat-value">{{ .User.CreatedAt.Format "Jan 2006" }}</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function logout() {
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Logout failed:', error);
+            }
+        }
+    </script>
+</body>
+</html>

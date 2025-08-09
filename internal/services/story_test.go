@@ -66,8 +66,8 @@ func TestStoryService_LoadStory(t *testing.T) {
 	if len(intro.Options) != 1 {
 		t.Errorf("Expected 1 option, got %d", len(intro.Options))
 	}
-	if intro.Image != "gopher_intro.png" {
-		t.Errorf("Expected image 'gopher_intro.png', got '%s'", intro.Image)
+	if intro.Image != "home_gopher.png" {
+		t.Errorf("Expected image 'home_gopher.png', got '%s'", intro.Image)
 	}
 }
 
@@ -240,15 +240,15 @@ func TestStoryService_getImageFromArc(t *testing.T) {
 		arcName  string
 		expected string
 	}{
-		{"intro", "gopher_intro.png"},
-		{"new-york", "gopher_new-york.png"},
-		{"debate", "gopher_debate.png"},
-		{"sean-kelly", "gopher_sean-kelly.png"},
-		{"mark-bates", "gopher_mark-bates.png"},
-		{"denver", "gopher_denver.png"},
-		{"home", "gopher_home.png"},
-		{"unknown", "default_gopher.png"},
-		{"", "default_gopher.png"},
+		{"intro", "home_gopher.png"},
+		{"new-york", "home_gopher.png"},
+		{"debate", "home_gopher.png"},
+		{"sean-kelly", "home_gopher.png"},
+		{"mark-bates", "home_gopher.png"},
+		{"denver", "home_gopher.png"},
+		{"home", "home_gopher.png"},
+		{"unknown", "home_gopher.png"},
+		{"", "home_gopher.png"},
 	}
 
 	for _, test := range tests {

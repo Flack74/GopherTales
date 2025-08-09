@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 
+	"GopherTales/internal/models"
 	"GopherTales/internal/services"
 )
 
@@ -27,7 +28,7 @@ func (a *APIHandler) HealthCheck(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response := map[string]interface{}{
+	response := map[string]any{
 		"status":  "healthy",
 		"service": "GopherTales",
 		"version": "1.0.0",
@@ -72,7 +73,7 @@ func (a *APIHandler) GetAllArcs(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response := map[string]interface{}{
+	response := map[string]any{
 		"arcs": storyData.Arcs,
 	}
 
@@ -93,21 +94,33 @@ func (a *APIHandler) GetArc(w http.ResponseWriter, r *http.Request) {
 	}
 
 	arcName := r.URL.Query().Get("name")
+	gopher := r.URL.Query().Get("gopher")
+
 	if arcName == "" {
 		http.Error(w, "Arc name is required", http.StatusBadRequest)
 		return
 	}
 
-	arc, finalArcName, err := a.storyService.GetArc(arcName)
+	var arc models.Arc
+	var finalArcName string
+	var err error
+
+	if gopher != "" {
+		arc, finalArcName, err = a.storyService.GetGopherArc(gopher, arcName)
+	} else {
+		arc, finalArcName, err = a.storyService.GetArc(arcName)
+	}
+
 	if err != nil {
 		log.Printf("Error getting arc '%s': %v", arcName, err)
 		http.Error(w, "Arc not found", http.StatusNotFound)
 		return
 	}
 
-	response := map[string]interface{}{
+	response := map[string]any{
 		"arc_name": finalArcName,
 		"arc":      arc,
+		"gopher":   gopher,
 	}
 
 	w.Header().Set("Content-Type", "application/json")
@@ -115,6 +128,47 @@ func (a *APIHandler) GetArc(w http.ResponseWriter, r *http.Request) {
 
 	if err := json.NewEncoder(w).Encode(response); err != nil {
 		log.Printf("Error encoding arc response: %v", err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+	}
+}
+
+// GetGophers returns all available gopher characters
+func (a *APIHandler) GetGophers(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	gophers := a.storyService.GetAvailableGophers()
+
+	response := map[string]any{
+		"gophers": gophers,
+		"count":   len(gophers),
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error encoding gophers response: %v", err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+	}
+}
+
+// GetGopherStats returns statistics for all gopher stories
+func (a *APIHandler) GetGopherStats(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	stats := a.storyService.GetGopherStats()
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	if err := json.NewEncoder(w).Encode(stats); err != nil {
+		log.Printf("Error encoding gopher stats response: %v", err)
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 	}
 }
